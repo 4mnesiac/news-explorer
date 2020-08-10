@@ -1,4 +1,4 @@
-# News Explorer
+# News Explorer Backend
 ### Описание
 
 Бэкенд для проекта дипломного "News Explorer".
