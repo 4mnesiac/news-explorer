@@ -43,8 +43,8 @@ module.exports.deleteArticle = (req, res, next) => {
       }
       return Article.findByIdAndRemove(req.params._id)
         .then(() => {
-          res.status(200).send({ message: 'Карточка успешно удалена' });
-        });
+          res.status(200).send({ message: 'Карточка удалена' });
+        })
     })
     .catch(next);
 };
