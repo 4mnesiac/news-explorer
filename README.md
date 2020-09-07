@@ -10,3 +10,7 @@
 Фронтенд будет располагаться на: [https://art-explorer.tk](https://art-explorer.tk)
 
 Запросы к API по адресу https://api.art-explorer.tk
+
+### Версии
+
+**v.1.0.1** - инициализация проекта.
