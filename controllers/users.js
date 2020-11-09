@@ -31,13 +31,13 @@ module.exports.login = (req, res, next) => {
             { expiresIn: '7d' },
           );
           res
-            .cookie('jwt', token, {
-              maxAge: 3600 * 1000 * 24 * 7,
-              httpOnly: true,
-              sameSite: true,
-            })
+            // .cookie('jwt', token, {
+            //   maxAge: 3600 * 1000 * 24 * 7,
+            //   httpOnly: true,
+            //   sameSite: true,
+            // })
             .status(200)
-            .send({ message: 'Авторизация успешна!' });
+            .send({ jwt: token });
         }).catch(() => {
           next(new AuthError('Ошибка авторизации'));
         });
@@ -62,7 +62,6 @@ module.exports.createUser = (req, res, next) => {
         password: hash,
       }))
       .then(() => res.status(201).send({
-        message: `Пользователь ${name} успешно создан`,
         data: {
           name,
           email,

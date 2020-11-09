@@ -7,7 +7,7 @@ const {
   getUser,
   login,
   createUser,
-// eslint-disable-next-line import/no-dynamic-require
+  // eslint-disable-next-line import/no-dynamic-require
 } = require(path.join(__dirname, '..', 'controllers', 'users'));
 
 router.get('/users/me', auth, getUser);
