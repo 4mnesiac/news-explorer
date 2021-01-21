@@ -13,7 +13,7 @@ const error = require('./middlewares/errors');
 const routes = require('./routes/index');
 
 const whitelist = ['http://localhost:8080', 'https://4mnesiac.github.io/news-explorer-frontend/pages/index.html#',
-  'https://4mnesiac.github.io', 'https://art-explorer.tk/', 'http://art-explorer.tk/'];
+  'https://4mnesiac.github.io', 'https://nhance.tk/', 'http://nhance.tk/'];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -41,7 +41,7 @@ async function start() {
     });
 
     app.listen(PORT, () => {
-      console.log(`App successfully starting on port ${PORT}`);
+      console.log(`App successfully started on port ${PORT}, timestamp: ${new Date().toUTCString()}`);
     });
   } catch (err) {
     console.error(err);
